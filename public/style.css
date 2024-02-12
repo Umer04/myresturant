@@ -1,0 +1,429 @@
+*
+{
+    font-family: "Roboto",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+.header
+{
+    background-color: rgb(0, 0, 0);
+    border-bottom:0.2rem solid yellow ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:8px 7%;
+    top :0;
+    left: 0;
+    right: 0;
+    z-index:1000 ;
+}
+.header .logo img{
+    max-width:75px;
+}
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.header .navbar a:hover
+{
+    border-bottom: 0.1rem solid yellow;
+    color: yellow;
+    padding-bottom: 0.5rem;
+}
+
+.header .icons div{
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+
+}
+
+.header .icons div:hover
+{
+    color: yellow;
+}
+
+#menu-btn
+{
+    display: none;
+}
+
+@media (max-width:768px)
+{
+    #menu-btn
+    {
+        display: inline-block;
+    }  
+    
+    .header .navbar
+    {
+        position: absolute;
+        top:17%;
+        right:-100%;
+        background: black;
+        width: 25rem;
+        height:calc(85vh - 8.5rem);
+    }
+    .header .navbar.active{
+     right:1%;
+    }
+    .header .navbar a
+    {
+        color: white;
+        display: block;
+        padding:1rem;
+    }
+}
+.header .search-form
+{
+    position: absolute;
+    top:18%;
+    right: 7%;
+    background-color: white;
+    width: 50rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active
+{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+}
+.header .search-form label{
+    cursor:pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: black;
+}
+.header .search-form label:hover{
+    color:yellow;
+}
+
+.header .cart-items-container
+{
+    position: absolute;
+    top:17%;
+    right:-100%;
+    height:calc(95vh - 8.5rem);
+    width:25%;
+    background: white;
+    padding: 0 1.5rem;
+
+}
+.header .cart-items-container.active
+{
+    right:0%;
+}
+
+.header .cart-items-container .cart-items{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+   
+}
+.header .cart-items-container .cart-items img{
+    height:7rem;
+    width: 8rem;
+}
+.header .cart-items-container .cart-items .content h3{
+    color: black;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.header .cart-items-container .cart-items .content .price
+{
+    font-size: 1.5rem;
+    color: rgb(255, 204, 0);
+}
+
+.header .cart-items-container .btn
+{
+   margin-left: 8rem;
+    align-items: center;
+}
+.header .cart-items-container .cart-items .fa-times{
+position: absolute;
+top: 1rem;
+right: 1rem;
+font-size: 2rem;
+cursor: pointer;
+color: black;
+}
+
+.header .cart-items-container .cart-items .fa-times:hover{
+    color: yellow;
+}
+.home
+{
+    min-height: 100vh;
+    display: flex;
+  padding: 8rem 0 0 8rem;
+  
+   background:linear-gradient(90deg,rgb(0 0 0 / 90%),rgb(68 68 68 /35%)), url(../images/food.jpg)  no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.home .content
+{
+    max-width: 70rem;
+    
+}
+.home span{
+    text-transform: uppercase;
+    color: yellow;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: white;
+}
+
+.btn
+{
+    background-color: rgb(255, 204, 0);
+   padding:0.4rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+ font-size: 2rem;
+        }
+
+ .btn:hover{
+background-color: rgb(88, 86, 86);
+ }       
+.About
+{
+    background-color: rgb(0, 0, 0);
+   
+}
+
+.heading
+{
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 4rem;
+}
+ .heading span
+{
+    color: yellow;
+}
+.About .row{
+    display: flex;
+
+    padding: 2rem 2rem 2rem 20rem;
+}
+.About .row .image img{
+   height : 30rem;
+   width: 40rem;
+}
+
+.content h3{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.content p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.About .row .content{
+    width:50%;
+    background-color: rgb(33, 31, 31);
+    padding: 2rem;
+}
+
+.menu .box-container
+{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.menu
+{
+    background: black;
+}
+.menu .box-container .box
+{
+    padding: 5rem;
+    text-align: center;
+    border: 0.2rem solid yellow;
+   
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.menu .box-container .box h3{
+    color:white;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+
+}
+.box-container .box .price 
+{
+    color:white;
+    font-size: 2.5rem;
+    padding: 0.5rem 0; 
+}
+.box-container .box .price span
+{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover
+{
+    background: rgb(88, 65, 7);
+    transition: 0.5s;
+}
+
+.products
+{
+    background: rgb(0, 0, 0);
+}
+
+.products .box-container .box
+{
+    text-align: center;
+    border: 0.2rem solid yellow;
+    padding:2rem;
+}
+
+.products .box-container
+{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box .icons div
+{
+height: 5rem;
+width: 5rem;
+font-size: 2rem;
+border:0.2rem solid;
+color: white;
+margin: 0.3rem;
+padding: 1rem;
+}
+
+.products .box-container .box .icons div:hover
+{
+    background-color: yellow;
+}
+
+.products .box-container .box .images
+{
+padding: 2.5rem 0;
+}
+
+.products .box-container .box .images img{
+    height:20rem;
+    width:20rem;
+}
+
+.products .box-container .box .container h1{
+    color: rgb(252, 246, 246);
+    font-size: 2.5rem;
+}
+
+
+.products .box-container .box .container .stars i
+{
+    padding: 0.8rem;
+    font-size: 2rem;
+    color:yellow;
+}
+
+.contact
+{
+    background: rgb(0, 0, 0);
+}
+.contact .row 
+{
+    display: flex;
+    background-color: rgb(41, 41, 41);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map
+{
+    flex:1 1 45rem;
+    width:100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h4{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.contact .row form .input-box
+{
+ display:flex;
+ align-items: center;
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+ background: rgb(26, 24, 24);   
+ border: 0.2rem solid yellow;
+}
